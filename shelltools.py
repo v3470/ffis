@@ -1,3 +1,3 @@
-import img_server
-from img_server import db
-from img_server import model
+import ffis
+from ffis import db
+from ffis import model

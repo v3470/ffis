@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask,g
 from werkzeug.routing import BaseConverter
 
 class RegexConverter(BaseConverter):
@@ -25,11 +25,15 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    #todo: 生成redis post_key
+
     from . import db
     db.db.init_app(app)
     db.init_app(app)
 
     with app.app_context():
         from . import view
+        g.img_dir_path = os.path.join(app.instance_path, app.config['IMAGE_DIR'])
 
     return app
+

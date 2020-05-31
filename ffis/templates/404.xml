@@ -1,0 +1,11 @@
+<Error>
+<Code>NoSuchKey</Code>
+<Message>
+The specified key does not exist. Object [{{request.path[4:]}}] not exist
+</Message>
+<Resource>Bucket:ff,Object:{{request.path[4:]}}</Resource>
+<RequestId></RequestId>
+<HostId></HostId>
+<Key/>
+<StatusMessage/>
+</Error>
